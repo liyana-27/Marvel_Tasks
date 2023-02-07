@@ -21,4 +21,41 @@ The code can be split into the following major steps:
 
 <ol>
   <li>Importing all the dependent modules and libraries</li>
+  <br><img src = "/pictures/1.1.png"></img>
+  <li>Now, we import the housing data and store it in a variable</li>
+  <br><img src = "/pictures/1.2.png"></img>
+  <br>Note that here, data refers to the x values, target refers to the y values and feature names refer to the column names.
+  <li>Now, we put this data into a DataFrame using Pandas. DataFrames are used because they are easy to manipulate. The x and y values are put into two separate DataFrames. The conversion function and code is as shown below</li>
+  <br><img src = "/pictures/1.3.png"></img>
+  <li>Now, we view the first 5 rows of the newly created DataFrame as well as some of its descriptive statistics using the head() and describe() functions</li>
+  <br><img src = "/pictures/1.4.png"></img>
+  <li>Printing the shape of x and y values (shape is the number of rows and columns in the DataFrame)</li>
+  <br><img src = "/pictures/1.5.png"></img>
+  <li>Now, we create an instance of scikit- learn's regression model. We go on to use the train_test_split function to split our data into training and testing data.</li>
+  <br><img src = "/pictures/1.6.png"></img>
+  <br>Here, 66% of the data falls into the training data while the rest becomes testing data
+  <li>Now, we train or ‘fit’ the data with the help of our training data</li>
+  <br><img src = "/pictures/1.7.png"></img>
+  <li>Now, we use the relationship determined by training the model to predict y values for the testing values of x.</li>
+  <br><img src = "/pictures/1.8.png"></img>
+  <li>Plotting a graph of the actual data against the predicted data (using matplotlib), we get</li>
+  <br><img src = "/pictures/1.9.png"></img>
+  <li>We calculate the mean squared error (the average of the squared difference between the predicted and actual values). The lower this is, the more accurate the model is. Along with this, we also calculate the r2 score (ratio of information that the model can explain to the total information). Clearly, the higher r2 is, the better the relationship between the dependent and independent values.</li>
+  <br><img src = "/pictures/1.10.png"></img>
+  <br>So, the model is 99.2673% accurate.
 </ol>
+
+### Logistic Regression - Train a model to distinguish between different species of the Iris flower based on sepal length, sepal width, petal length, and petal width. Use sci-kit’s linear_model.LogisticRegression
+Logistic Regression is a classification algorithm. It models the probability of an event taking place by plotting the logarithmic sigmoid (to bring the output between 0 and 1) of a linear combination of independent variables. 
+
+Concepts like maximum likelihood and the decision boundary are used in this model to classify the given data into required categories.
+
+Something to note is that classification requires probability of the class and therefore should be between 0 and 1, in contrast to linear regression which places no bounds on the predicted outcome.
+
+Here, we pick up the iris dataset containing 50 instances each for three species of flowers (Iris Setosa, Iris Versicolor and Iris Virginica) and their four attributes - petal width and length and sepal width and length. 
+
+The modules and libraries used are the same as the ones in linear regression except for one - **Seaborn**, a data visualization library based on matplotlib. It is used mainly for integrating high-level statistical graphics.
+
+The implementation of the model can be split up into the following steps:
+
+
