@@ -8,3 +8,4 @@ The np.array() function creates arrays (single or multi-dimensional). The tile()
 The argsort() function returns an array of the original array elements’ indices such that the indices represent the elements in ascending order.
 
 Both of these have been demonstrated in the following images:
+<img src="pictures/3.1.png"></img>
