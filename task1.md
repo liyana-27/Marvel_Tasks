@@ -1,5 +1,5 @@
-## Linear and Logistic Regression - HelloWorld for AIML
-### Linear Regression - Predict the price of a home, based on multiple different variables. Use sci-kit’s linear_model.LinearRegression()
+# Linear and Logistic Regression - HelloWorld for AIML
+## Linear Regression - Predict the price of a home, based on multiple different variables. Use sci-kit’s linear_model.LinearRegression()
 Linear Regression is a machine learning algorithm that determines the relationship between one dependent variable (y) and one or more independent variables (x). It models a target prediction value based on the dependent variable, using this determined relationship. 
 
 A linear regression line has the equation **Y=mX + b**
@@ -45,7 +45,7 @@ The code can be split into the following major steps:
   <br>So, the model is 99.2673% accurate.
 </ol>
 
-### Logistic Regression - Train a model to distinguish between different species of the Iris flower based on sepal length, sepal width, petal length, and petal width. Use sci-kit’s linear_model.LogisticRegression
+## Logistic Regression - Train a model to distinguish between different species of the Iris flower based on sepal length, sepal width, petal length, and petal width. Use sci-kit’s linear_model.LogisticRegression
 Logistic Regression is a classification algorithm. It models the probability of an event taking place by plotting the logarithmic sigmoid (to bring the output between 0 and 1) of a linear combination of independent variables. 
 
 Concepts like maximum likelihood and the decision boundary are used in this model to classify the given data into required categories.
@@ -58,4 +58,34 @@ The modules and libraries used are the same as the ones in linear regression exc
 
 The implementation of the model can be split up into the following steps:
 
+<ol>
+  <li>Importing all the dependent modules and libraries</li>
+  <br><img src = "/pictures/1.11.png"></img>
+  <br><img src = "/pictures/1.12.png"></img>
+  <li>Now, we load the iris dataset into a local variable</li>
+  <br><img src = "/pictures/1.13.png"></img>
+  <br>Note that here, data refers to the x values, target refers to the y values and feature names refer to the column names.
+  <li>Now, we create DataFrames to store this data</li>
+  <br><img src = "/pictures/1.14.png"></img>
+  <li>Viewing the first 5 rows of the created DataFrames,</li>
+  <br><img src = "/pictures/1.15.png"></img>
+  <li>Now, we create an instance of sci-kit’s logistic regression model and then go on to split the data into training and testing sets</li>
+  <br><img src = "/pictures/1.16.png"></img>
+  <br>Here, the training sets contain 75% of the total data.
+  <li>Now, we ‘fit’ the model using the training sets we just created.</li>
+  <br><img src = "/pictures/1.17.png"></img>
+  <li>Viewing the coefficients and intercepts of the linear relationship the model has arrived at</li>
+  <br><img src = "/pictures/1.18.png"></img>
+  <li>Now, we use the relationship determined by the model to predict y values for the testing set</li>
+  <br><img src = "/pictures/1.19.png"></img>
+  <li>We plot the confusion matrix for the data and the corresponding predictions</li>
+  <br><img src = "/pictures/1.20.png"></img>
+  <br>A confusion matrix is a performance measurement for machine learning classification. So here, the numbers along the diagonal of the matrix (16,10,11) are all the times our model was accurate while the other numbers point out the times our model messed up.
+  <li>This matrix can be viewed better with the help of Python’s seaborn library which is what we do next</li>
+  <br><img src = "/pictures/1.21.png"></img>
+  <br>Here, it is clear that only one prediction is wrong.
+  <li>Finally, we use one of the default metrics (score) offered by sklearn to calculate the accuracy of our model.</li>
+  <br><img src = "/pictures/1.22.png"></img>
+  <br>Hence, our model is 97% accurate
+</ol>
 
